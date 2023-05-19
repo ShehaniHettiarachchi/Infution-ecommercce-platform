@@ -20,7 +20,7 @@ function Navbar() {
                 <div className="collapse navbar-collapse" id="navbarNavAltMarkup">
                     <div className="navbar-nav Navbtn">
                         
-                        <Link to="/add-product" className="btn nav-link anime color active" style={{color:"white"}} aria-current="page">Add Product</Link>
+                        <Link to="/add" className="btn nav-link anime color active" style={{color:"white"}} aria-current="page">Add Product</Link>
                         <Link to="/view-product" className="btn nav-link anime color" style={{color:"white"}}>Available Products</Link>
                         <Link to="/printreport" className="btn nav-link anime color" style={{color:"white"}} aria-current="page">Generate Report</Link>
 

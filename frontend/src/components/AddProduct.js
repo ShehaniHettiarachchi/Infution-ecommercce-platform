@@ -38,7 +38,7 @@ export default function AddProduct() {
                             <td>
                                 <div className="col-md-12">
                                 <label for="inserProduct" className="form-label1">Product Name</label>
-                                <input type="text" name="productName" className="form-control input-field" id="inserProduct" placeholder="Enter product name" required
+                                <input type="text" name="name" className="form-control input-field" id="inserProduct" placeholder="Enter product name" required
                                     />
                                 </div>
                             </td>

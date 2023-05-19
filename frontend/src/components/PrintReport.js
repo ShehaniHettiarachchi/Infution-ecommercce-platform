@@ -50,7 +50,7 @@ export default function PrintReport() {
 
     const [editFormData, setEditFormData] = useState({
         productID: "",
-        productName: "",
+        name: "",
         category: "",
         date: "",
         size: "",
@@ -77,7 +77,7 @@ export default function PrintReport() {
 
         const updateProduct = {
             ID: editProduct,
-            productName: editFormData.productName,
+            name: editFormData.name,
             category: editFormData.category,
             price: editFormData.price,
             quantity: editFormData.quantity
@@ -115,7 +115,7 @@ export default function PrintReport() {
 
         const formValues = {
             productID: product.productID,
-            productName: product.productName,
+            name: product.name,
             category: product.category,
             date: product.date,
             price: product.price,
@@ -240,14 +240,14 @@ export default function PrintReport() {
                                 {products.filter((product) => {
                                     if (q === "") {
                                         return product
-                                    } else if (product.productName.toLowerCase().includes(q.toLowerCase())) {
+                                    } else if (product.name.toLowerCase().includes(q.toLowerCase())) {
                                         return product
                                     }
                                 }).map((product) => (
                                     <Fragment>
                                         <tr>
                                             <td className='td'>{product.productID}</td>
-                                            <td className='td'>{product.productName}</td>
+                                            <td className='td'>{product.name}</td>
                                             <td className='td'>{product.category}</td>
                                             <td className='td'>{product.date.substring(0, 10)}</td>
                                             <td className='td'>{product.size}</td>

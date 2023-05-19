@@ -1,55 +1,49 @@
-import { useDispatch, useSelector } from "react-redux";
-import { useNavigate } from "react-router";
-import { addToCart } from "../slices/cartSlice";
-import { useGetAllProductsQuery } from "../slices/productsApi";
+import React, {useState,useEffect} from 'react';
+import axios from 'axios';
 import HomeNavBar from './HomeNavBar';
-import Footer from "./Footer";
+import {Row,Container} from 'react-bootstrap';
+import { useSelector } from 'react-redux';
+import ViewBeautyProducts from './ViewBeautyProducts';
 
-const BeautyProducts = () => {
-  const { items: product, status } = useSelector((state) => state.products);
-  const dispatch = useDispatch();
-  const navigate = useNavigate();
 
-  const { data, error, isLoading } = useGetAllProductsQuery();
+export default function BeautyProducts() {
 
-  const handleAddToCart = (product) => {
-    dispatch(addToCart(product));
-    navigate("/cart");
-  };
+    const [products,setProducts] = useState([]);
 
-  return (
-    <>
-    <HomeNavBar/>
-    <div className="home-container">
-      {status === "success" ? (
+
+   
+    useEffect(() =>{
+
+        function getProducts() {
+            axios.get("http://localhost:5000/product/view").then((res) => {
+
+                setProducts(res.data);
+            }).catch((err) => {
+
+                alert(err.message);
+            })
+        }
+
+        getProducts();
+
+    }, [])
+
+    return (
         <>
-          <h2>New Arrivals</h2>
-          <div className="products">
-            {data &&
-              data?.map((product) => (
-                <div key={product._id} className="product">
-                  <h3>{product.name}</h3>
-                  <img src={product.image?.url} alt={product.name} />
-                  <div className="details">
-                    <span>{product.desc}</span>
-                    <span className="price">${product.price}</span>
-                  </div>
-                  <button onClick={() => handleAddToCart(product)}>
-                    Add To Cart
-                  </button>
-                </div>
-              ))}
-          </div>
-        </>
-      ) : status === "pending" ? (
-        <p>Loading...</p>
-      ) : (
-        <p>Unexpected error occured...</p>
-      )}
-    </div>
-    <Footer/>
-    </>
-  );
-};
+            <HomeNavBar/>
 
-export default BeautyProducts;
+           <Container className='justify-content-center p-2'>
+           <Row>
+              {products.map((product)=> {
+                  return(
+                    <ViewBeautyProducts product={product}   />
+                  )
+              })}
+           </Row>
+           </Container>
+            
+                
+            
+        </>
+    )
+}

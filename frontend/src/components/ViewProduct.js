@@ -44,7 +44,7 @@ export default function ViewProducts(){
 
     const [editFormData, setEditFormData] = useState({
         productID: "",
-        productName: "",
+        name: "",
         category: "",
         date: "",
         size: "",
@@ -71,7 +71,7 @@ export default function ViewProducts(){
         
         const updateProduct ={
             ID: editProduct,
-            productName: editFormData.productName,
+            name: editFormData.name,
             category: editFormData.category,
             price: editFormData.price,
             quantity: editFormData.quantity
@@ -109,7 +109,7 @@ export default function ViewProducts(){
 
         const formValues = {
             productID: product.productID,
-            productName: product.productName,
+            name: product.name,
             category: product.category,
             date: product.date,
             price: product.price,
@@ -182,7 +182,7 @@ export default function ViewProducts(){
                         {products.filter((product)=> {
                             if(q === ""){
                                 return product
-                            }else if(product.productName.toLowerCase().includes(q.toLowerCase())) {
+                            }else if(product.name.toLowerCase().includes(q.toLowerCase())) {
                                 return product
                             }
                         }).map((product)=> (

@@ -7,7 +7,7 @@ const EditProduct = ({editFormData, handleEditFormChange, handleCancelClick}) =>
                 
             </td>
             <td>
-                <input type="text" required="required" placeholder='Enter product name...' name="productName" value={editFormData.productName} onChange={handleEditFormChange}/>
+                <input type="text" required="required" placeholder='Enter product name...' name="name" value={editFormData.name} onChange={handleEditFormChange}/>
             </td>
             <td>
                 <select required="required" name="category">

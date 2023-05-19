@@ -11,7 +11,7 @@ const productSchema = new Schema({
         type:String,
         
     },
-    productName : {
+    name : {
         type : String,
         required : true,
         unique: true,
@@ -40,7 +40,6 @@ const productSchema = new Schema({
     image : {
         type : String,
         required : true,
-        unique : true
     }
     
 
