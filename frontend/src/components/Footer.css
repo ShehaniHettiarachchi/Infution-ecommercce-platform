@@ -1,7 +1,6 @@
-
 .footer-container {
   background-color: #242424;
-  padding: 4rem 0  0;
+  padding: 4rem 0 0;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -15,24 +14,21 @@
   align-items: center;
   text-align: center;
 
- 
   padding: 24px;
   color: #fff;
 }
 
 .footer-subscription > p {
-  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande',
-    'Lucida Sans', Arial, sans-serif;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
 }
 
 .footer-subscription-heading {
-  
   font-size: 24px;
   margin-right: 30px;
 }
 
 .footer-subscription-text {
-  
   font-size: 20px;
   margin-right: 25px;
 }
@@ -44,7 +40,7 @@
   outline: none;
   border: none;
   font-size: 18px;
-  
+
   border: 1px solid #fff;
 }
 
@@ -60,38 +56,37 @@
 }
 
 .feedback_btn {
-outline: none;
-border: none;
-cursor: pointer;
-width: 70%;
-height: 40px;
-border-radius: 10px;
-font-size: 18px;
-font-weight: 700;
-font-family: "Lato", sans-serif;
-color: #fff;
-text-align: center;
-background-color: rgba(8, 8, 8, 0.7);
-box-shadow: 3px 3px 8px #10B48E, -3px -3px 8px #10B48E;
-transition: all 0.5s;
-margin-left: 50px;
-margin-right: 50px;
+  outline: none;
+  border: none;
+  cursor: pointer;
+  width: 70%;
+  height: 40px;
+  border-radius: 10px;
+  font-size: 18px;
+  font-weight: 700;
+  font-family: "Lato", sans-serif;
+  color: #fff;
+  text-align: center;
+  background-color: rgba(8, 8, 8, 0.7);
+  box-shadow: 3px 3px 8px #10b48e, -3px -3px 8px #10b48e;
+  transition: all 0.5s;
+  margin-left: 50px;
+  margin-right: 50px;
 }
 
 .feedback_btn:hover {
-background-color: #10B48E;
+  background-color: #10b48e;
 }
 
 .feedback_btn:active {
-background-color: #88ef9e;
+  background-color: #88ef9e;
 }
-
 
 .footer-link-items {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  
+
   text-align: left;
   width: 160px;
   box-sizing: border-box;
@@ -151,13 +146,12 @@ background-color: #88ef9e;
   justify-content: space-between;
   align-items: center;
   width: 240px;
-  
 }
 
 .social-logo {
   color: #fff;
   justify-self: start;
-  
+
   cursor: pointer;
   text-decoration: none;
   font-size: 2rem;
@@ -195,4 +189,3 @@ background-color: #88ef9e;
 
 @media screen and (max-width: 768px) {
 }
-
