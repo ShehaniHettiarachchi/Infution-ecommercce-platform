@@ -7,7 +7,7 @@ const ViewProductTable = ({ product, handleEditClick, handleDeleteClick }) => {
     <>
       <tr>
         <td className="td">{product.productID}</td>
-        <td className="td">{product.productName}</td>
+        <td className="td">{product.name}</td>
         <td className="td">{product.category}</td>
         <td className="td">{product.date.substring(0, 10)}</td>
         <td className="td">{product.size}</td>

@@ -14,8 +14,8 @@ const EditProduct = ({
           type="text"
           required="required"
           placeholder="Enter product name..."
-          name="productName"
-          value={editFormData.productName}
+          name="name"
+          value={editFormData.name}
           onChange={handleEditFormChange}
         />
       </td>

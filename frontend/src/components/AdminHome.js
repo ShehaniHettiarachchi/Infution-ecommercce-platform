@@ -1,7 +1,6 @@
 
 import React from "react";
 import AdminCards from "./AdminCards";
-import Footer from "./Footer";
 import AdminNavBar from "./AdminNavBar";
 
 
