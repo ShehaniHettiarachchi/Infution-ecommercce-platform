@@ -1,3 +1,4 @@
+
 import React, {useState,useEffect} from 'react';
 import axios from 'axios';
 import HomeNavBar from './HomeNavBar';
@@ -11,7 +12,6 @@ export default function BeautyProducts() {
     const [products,setProducts] = useState([]);
 
 
-   
     useEffect(() =>{
 
         function getProducts() {

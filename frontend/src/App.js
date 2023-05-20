@@ -3,7 +3,12 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { ToastContainer } from "react-toastify";
 
 import Home from "./components/Home";
+
+import HomeNavBar from "./components/HomeNavBar";
+
+
 import AdminHome from "./components/AdminHome";
+
 import NotFound from "./components/NotFound";
 import Cart from "./components/Cart";
 
@@ -20,9 +25,8 @@ import ViewProducts from "./components/ViewProduct";
 import PrintReport from "./components/PrintReport";
 
 
-import AddDeliveries from './containers/deliveryManagement/AddDelivery';
-import ViewDeliveries from './containers/deliveryManagement/ViewDeliveries';
-
+import AddDeliveries from "./containers/deliveryManagement/AddDelivery";
+import ViewDeliveries from "./containers/deliveryManagement/ViewDeliveries";
 
 import BeautyProducts from "./components/BeautyProducts";
 import FaceScrub from "./components/FaceScrub";
@@ -32,7 +36,6 @@ import BodyScrub from "./components/BodyScrub";
 import Toner from "./components/Toner";
 import GenerateReport from "./components/GenerateReport";
 import LoadingPage from "./components/common/LoadingPage";
-
 
 function App() {
   const dispatch = useDispatch();
@@ -57,11 +60,13 @@ function App() {
             <Route path="*" element={<NotFound />} />
 
 
+
             <Route path="/add" element={<AddProduct />} />
             <Route path="/view-product" element={<ViewProducts />} />
-            <Route path="/printreport" element={<PrintReport/>}/>
+            <Route path="/printreport" element={<PrintReport />} />
 
             <Route path="/add-delivery" element={<AddDeliveries />} />
+
             <Route path="/view-delivery" element={<ViewDeliveries/>}/>
             <Route path="/GenerateReport" element={<GenerateReport/>}/>
 
@@ -74,6 +79,8 @@ function App() {
 
           
 
+
+            <Route path="/beauty-products" element={<BeautyProducts />} />
           </Routes>
         </div>
       </BrowserRouter>
