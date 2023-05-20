@@ -3,10 +3,10 @@ import { Link } from "react-router-dom";
 import { FaHome } from "react-icons/fa";
 import "./AddProductNavBar.css";
 
-function Navbar() {
+function AddProductNavbar() {
   return (
     <nav className="navbar navbar-expand-lg navbar-light nav">
-      <div className="container-fluid">
+      <div className="container">
         <button
           className="navbar-toggler"
           type="button"
@@ -62,4 +62,4 @@ function Navbar() {
   );
 }
 
-export default Navbar;
+export default AddProductNavbar;

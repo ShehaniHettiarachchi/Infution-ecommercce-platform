@@ -21,11 +21,13 @@ const EditProduct = ({
       </td>
       <td>
         <select required="required" name="category">
-          <option>Choose...</option>
-          <option>Pizza</option>
-          <option>Burgers</option>
-          <option>Shawarma</option>
-          <option>Hot Dogs</option>
+              <option>Choose...</option>
+              <option>Beauty product</option>
+              <option>Night cream</option>
+              <option>Face scrub</option>
+              <option>Body scrub</option>
+              <option>Tonner Products</option>
+              <option>Face pack Products</option>
         </select>
       </td>
       <td></td>

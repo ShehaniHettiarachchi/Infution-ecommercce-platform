@@ -137,7 +137,7 @@ export default function ViewDeliveries() {
             });
         });
         setTimeout(() => {
-            window.location.replace("http://localhost:3000/ViewDeliveries");
+            window.location.replace("http://localhost:3000/view-delivery");
             }, 3000)
     }
 
