@@ -1,44 +1,46 @@
 import React from 'react';
-import HomeNavBar from '../HomeNavBar';
-import Footer from '../Footer';
-import {Link} from "react-router-dom";
+import { Link } from "react-router-dom";
+import Slider1 from '../../components/images/img1.jpg';
+import { CssVarsProvider, extendTheme } from '@mui/joy/styles';
+import Box from '@mui/joy/Box';
+import Button from '@mui/joy/Button';
+import KeyboardArrowRight from '@mui/icons-material/KeyboardArrowRight';
+
+const customTheme = extendTheme({
+    typography: {
+      display1: {
+        // `--joy` is the default CSS variable prefix.
+        // If you have a custom prefix, you have to use it instead.
+        // For more details about the custom prefix, go to https://mui.com/joy-ui/customization/using-css-variables/#custom-prefix
+        background:
+          'linear-gradient(-30deg, var(--joy-palette-primary-900), var(--joy-palette-success-200))',
+        // `Webkit*` properties must come later.
+        WebkitBackgroundClip: 'text',
+        WebkitTextFillColor: 'transparent',
+        fontSize: 48,
+        letterSpacing: '.3rem',
+      },
+    },
+  });
+
 
 
 export default function LoadingPage() {
+
+    
     return (
-        <>
-            <HomeNavBar />
-            <div className='body8'>
+    <div style={{backgroundColor: "#"}}>
+        <CssVarsProvider theme={customTheme}>
+            <Box sx={(theme) => theme.typography.display1}> <center> Explore Your True Beauty ...</center></Box>
+        </CssVarsProvider>
+        <Button variant="soft" endDecorator={<KeyboardArrowRight />} color="success" > <Link to= "/home">
+        Get Started </Link>
+      </Button>
+        <img src={Slider1} style={{width: "100%"}} />
+            
+        
+    </div>
 
-                <div className='topic1'>
+    );
 
-                    <h1>Welcome To</h1>
-                    <h1>Infution E-Commerce Platform</h1>
-
-                </div>
-
-                <div className='topic2'>
-                    <p>Qyuick Search</p>
-                </div>
-
-                <div className='topic3'>
-                    <p>Pay Online</p>
-                </div>
-
-                <div className='topic4'>
-                    <p>Smartcard</p>
-                </div>
-
-                <div className='topic5'>
-                    <p>NFC Technology</p>
-                </div>
-
-                <Link to = '/add-feedback'><button  className="learn_btn"> Learn More </button></Link>
-
-
-            </div>
-            <Footer />
-        </>
-
-    )
 }

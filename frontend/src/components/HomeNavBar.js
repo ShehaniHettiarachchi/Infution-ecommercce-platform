@@ -14,7 +14,7 @@ const NavBar = () => {
   const auth = useSelector((state) => state.auth);
 
   return (
-    <nav className="nav-bar position-fixed" style={{backgroundColor: '#0A4D68'}}>
+    <nav className="nav-bar position-relative" style={{backgroundColor: '#0A4D68', width: "100%"}}>
 
       <Typography
             variant="h6"
@@ -80,6 +80,7 @@ const NavBar = () => {
           >  
           <Link to="/login">Login</Link>
           <Link to="/register">Register</Link>
+          <Link to="admin-home">About Us</Link>
           </Typography>
         </AuthLinks>
       )}
