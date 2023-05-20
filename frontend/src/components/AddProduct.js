@@ -6,6 +6,7 @@ import "./HomeNavBar.css";
 import AdminNavBar from "./AdminNavBar";
 
 export default function AddProduct() {
+
   const clearData = () => {
     window.location.reload(false);
   };
@@ -178,3 +179,4 @@ export default function AddProduct() {
     </div>
   );
 }
+

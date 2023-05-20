@@ -1,5 +1,6 @@
 import React from "react";
 
+
 const EditProduct = ({
   editFormData,
   handleEditFormChange,
@@ -72,5 +73,6 @@ const EditProduct = ({
     </tr>
   );
 };
+
 
 export default EditProduct;

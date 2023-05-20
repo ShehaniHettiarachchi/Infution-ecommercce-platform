@@ -71,4 +71,5 @@ const ViewProductTable = ({ product, handleEditClick, handleDeleteClick }) => {
   );
 };
 
+
 export default ViewProductTable;

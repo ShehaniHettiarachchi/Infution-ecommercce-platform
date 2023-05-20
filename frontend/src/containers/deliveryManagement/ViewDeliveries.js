@@ -75,9 +75,38 @@ export default function ViewDeliveries() {
           icon: "success",
           showConfirmButton: false,
         });
-      })
-      .catch((err) => {
-        //alert(err)
+
+        setTimeout(() => {
+            window.location.replace("http://localhost:3000/view-delivery");
+            }, 2000)
+    }
+
+    const [editDelivery,setEditDelivery] = useState(null);
+
+    const handleEditClick = (e, delivery)=> {
+        e.preventDefault();
+        setEditDelivery(delivery._id)
+
+        const formValues = {
+            deliveryId: delivery.deliveryId,
+            customerName: delivery.customerName,
+            orderID: delivery.orderID,
+            customerContactNumber: delivery.customerContactNumber,
+            deliveryAddress: delivery.deliveryAddress,
+            noofOrders: delivery.noofOrders,
+            driverName: delivery.driverName,
+            driverContactNumber: delivery.driverContactNumber,
+            deliveryDate: delivery.deliveryDate,
+        }
+        setEditFormData(formValues);
+    }
+
+    const handleCancelClick = () => {
+        setEditDelivery(null);
+    }
+
+    const handleDeleteClick = (id) => {
+
         Swal.fire({
           title: "Error!",
           text: "Couldn't Update your Details",

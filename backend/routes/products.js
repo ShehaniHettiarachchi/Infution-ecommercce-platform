@@ -28,7 +28,7 @@ router.post('/add', upload, async(req,res)=>{
     const newProduct = new Product({
 
         productID: req.body,
-        productName: req.body.productName,
+        name: req.body.name,
         category: req.body.category,
         date: req.body.date,
         price: req.body.price,
@@ -86,13 +86,13 @@ router.route("/view").get((req,res)=>{
 
 router.route("/update/:ID").put(async(req,res)=>{
     let productId = req.body.ID;
-    const {productName} = req.body;
+    const {name} = req.body;
     const {category} = req.body;
     const {price} = req.body;
     const {quantity} = req.body;
 
     const Update = {
-        productName,
+        name,
         category,
         price,
         quantity,

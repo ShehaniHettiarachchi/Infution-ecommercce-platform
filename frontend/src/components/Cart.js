@@ -1,5 +1,5 @@
 import { useEffect } from "react";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, Link } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
 import {
   addToCart,
@@ -8,8 +8,6 @@ import {
   getTotals,
   removeFromCart,
 } from "../slices/cartSlice";
-
-import { Link } from "react-router-dom";
 import PayButton from "./PayButton";
 
 const Cart = () => {
@@ -42,7 +40,7 @@ const Cart = () => {
         <div className="cart-empty">
           <p>Your cart is currently empty</p>
           <div className="start-shopping">
-            <Link to="/">
+            <Link to="/home">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 width="20"

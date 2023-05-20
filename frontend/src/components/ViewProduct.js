@@ -10,6 +10,7 @@ import { FiPrinter } from "react-icons/fi";
 // import AdminNavBar from "./AdminNavBar";
 import swal from "sweetalert2";
 
+
 export default function ViewProducts() {
   const componentRef = useRef();
   // const handlePrint = useReactToPrint({
@@ -29,8 +30,10 @@ export default function ViewProducts() {
         })
         .catch((err) => {
           alert(err.message);
+
         });
     }
+
 
     getProducts();
   }, []);
@@ -204,3 +207,4 @@ export default function ViewProducts() {
     </div>
   );
 }
+

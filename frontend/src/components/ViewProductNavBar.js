@@ -30,10 +30,11 @@ function ViewNavbar() {
 
         <div className="collapse navbar-collapse"></div>
 
+
         <div className="collapse navbar-collapse" id="navbarNavAltMarkup">
           <div className="navbar-nav Navbtn">
             <Link
-              to="/add-product"
+              to="/add"
               type="radio"
               className="btn nav-link anime color"
               style={{ color: "white" }}
