@@ -1,8 +1,10 @@
-import { useEffect, useState } from "react";
+import { useEffect, useState,Link } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { loginUser } from "../../slices/authSlice";
 import { useNavigate } from "react-router-dom";
 import { StyledForm } from "./StyledForm";
+import HomeNavBar from '../HomeNavBar';
+import Footer from "../Footer";
 
 const Login = () => {
   const navigate = useNavigate();
@@ -29,6 +31,7 @@ const Login = () => {
 
   return (
     <>
+    <HomeNavBar/>
       <StyledForm onSubmit={handleSubmit}>
         <h2>Login</h2>
         <input
@@ -44,8 +47,10 @@ const Login = () => {
         <button>
           {auth.loginStatus === "pending" ? "Submitting..." : "Login"}
         </button>
+
         {auth.loginStatus === "rejected" ? <p>{auth.loginError}</p> : null}
       </StyledForm>
+      <Footer/>
     </>
   );
 };
