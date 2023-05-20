@@ -40,7 +40,7 @@ export default function AddProduct() {
                   </label>
                   <input
                     type="text"
-                    name="productName"
+                    name="name"
                     className="form-control input-field"
                     id="inserProduct"
                     placeholder="Enter product name"

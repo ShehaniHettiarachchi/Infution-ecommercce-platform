@@ -31,7 +31,9 @@ const NavBar = () => {
               textDecoration: 'none',
             }}
           >        <SpaIcon sx={{ display: { xl: 'none', md: 'flex' }, mr: 2 }} />
+          <Link to="/home">
             INFUTION
+            </Link>
           </Typography>
       <Link to="/cart">
         <div className="nav-bag">
