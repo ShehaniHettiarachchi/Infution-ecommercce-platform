@@ -10,6 +10,10 @@ import cartReducer, { getTotals } from "./slices/cartSlice";
 import authReducer from "./slices/authSlice";
 import { productsApi } from "./slices/productsApi";
 
+
+import 'bootstrap/dist/css/bootstrap.min.css';
+import 'bootstrap/dist/js/bootstrap.bundle.min';
+
 const store = configureStore({
   reducer: {
     products: productsReducer,

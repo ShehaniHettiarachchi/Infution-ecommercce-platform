@@ -37,6 +37,8 @@ import Toner from "./components/Toner";
 import GenerateReport from "./components/GenerateReport";
 import LoadingPage from "./components/common/LoadingPage";
 
+
+
 function App() {
   const dispatch = useDispatch();
 
@@ -47,6 +49,7 @@ function App() {
   return (
     <div className="App">
       <BrowserRouter>
+       
         <ToastContainer />
         <div className="content-container">
           <Routes>
