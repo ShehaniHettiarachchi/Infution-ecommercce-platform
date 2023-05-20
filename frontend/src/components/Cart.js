@@ -10,7 +10,7 @@ import {
 } from "../slices/cartSlice";
 import PayButton from "./PayButton";
 
-const  Cart =() =>{
+const Cart = () => {
   const cart = useSelector((state) => state.cart);
   const auth = useSelector((state) => state.auth);
 

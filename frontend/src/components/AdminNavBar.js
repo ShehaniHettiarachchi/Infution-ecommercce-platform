@@ -1,29 +1,17 @@
-import React,{useState,useEffect} from 'react';
-import './HomeNavBar.css';
-import './Header/Header.css';
-import {Link} from 'react-router-dom';
-import {AiOutlineDingding} from 'react-icons/ai';
-import {useSelector,useDispatch} from 'react-redux';
+import React, { useState, useEffect } from "react";
+import "./HomeNavBar.css";
+import "./Header/Header.css";
+import { Link } from "react-router-dom";
+import { AiOutlineDingding } from "react-icons/ai";
+import { useSelector, useDispatch } from "react-redux";
 import { FaShoppingCart } from "react-icons/fa";
 import { FaUserCircle } from "react-icons/fa";
-import {
-    Form,
-    FormControl,
-    Nav,
-    Navbar,
-    NavDropdown,
-  } from "react-bootstrap";
+import { Form, FormControl, Nav, Navbar, NavDropdown } from "react-bootstrap";
 
-
-function AdminNavBar () {
-
-  
-
-    return(
-        <Navbar bg="dark" expand="lg" variant="dark">
-      
-
-        {/* <div id='hdLogo'> 
+function AdminNavBar() {
+  return (
+    <Navbar bg="dark" expand="lg" variant="dark">
+      {/* <div id='hdLogo'> 
                 <img alt="Logo"  src={require("../images/Cafe.png")} width="90"  height="55" className="d-inline-block align-top" /> 
             </div> */}
             

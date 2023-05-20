@@ -2,7 +2,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { useNavigate } from "react-router";
 import { addToCart } from "../slices/cartSlice";
 import { useGetAllProductsQuery } from "../slices/productsApi";
-import HomeNavBar from './HomeNavBar';
+import HomeNavBar from "./HomeNavBar";
 import Footer from "./Footer";
 import Cards from "./Cards";
 
@@ -19,13 +19,12 @@ const Home = () => {
   };
 
   return (
-    <div className='back'>
-    <HomeNavBar/>
-    <Cards/>
-    <Footer/>
+    <div className="back">
+      <HomeNavBar />
+      <Cards />
+      <Footer />
     </div>
-  )
+  );
 };
-  
 
 export default Home;

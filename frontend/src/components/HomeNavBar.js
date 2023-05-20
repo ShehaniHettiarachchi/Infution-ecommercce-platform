@@ -4,23 +4,42 @@ import styled from "styled-components";
 import { logoutUser } from "../slices/authSlice";
 import { toast } from "react-toastify";
 
+// Material UI
+import SpaIcon from '@mui/icons-material/Spa';
+import Typography from '@mui/material/Typography';
+
 const NavBar = () => {
   const dispatch = useDispatch();
   const { cartTotalQuantity } = useSelector((state) => state.cart);
   const auth = useSelector((state) => state.auth);
 
   return (
-    <nav className="nav-bar">
-      <Link to="/">
-        <h2>INFUTION</h2>
-      </Link>
+    <nav className="nav-bar position-fixed" style={{backgroundColor: '#0A4D68'}}>
+
+      <Typography
+            variant="h6"
+            noWrap
+            component="a"
+            href="/"
+            sx={{
+              mr: 2,
+              display: { xs: 'none', md: 'flex' },
+              fontFamily: 'monospace',
+              fontWeight: 1000,
+              letterSpacing: '.3rem',
+              color: 'inherit',
+              textDecoration: 'none',
+            }}
+          >        <SpaIcon sx={{ display: { xl: 'none', md: 'flex' }, mr: 2 }} />
+            INFUTION
+          </Typography>
       <Link to="/cart">
         <div className="nav-bag">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             width="35"
             height="35"
-            fill="currentColor"
+            fill="#ECF2FF"
             className="bi bi-handbag-fill"
             viewBox="0 0 16 16"
           >
@@ -42,8 +61,24 @@ const NavBar = () => {
         </Logout>
       ) : (
         <AuthLinks>
+          <Typography
+            variant="h6"
+            noWrap
+            component="a"
+            sx={{
+              mr: 1,
+              display: { xs: 'none', md: 'flex' },
+              fontFamily: 'monospace',
+              fontSize: '0.9rem',
+              fontWeight: 700,
+              letterSpacing: '.01rem',
+              color: 'inherit',
+              textDecoration: 'none',
+            }}
+          >  
           <Link to="/login">Login</Link>
           <Link to="register">Register</Link>
+          </Typography>
         </AuthLinks>
       )}
     </nav>
