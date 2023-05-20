@@ -80,7 +80,7 @@ const NavBar = () => {
           >  
           <Link to="/login">Login</Link>
           <Link to="/register">Register</Link>
-          <Link to="admin-home">About Us</Link>
+          <Link to="/admin-home">About Us</Link>
           </Typography>
         </AuthLinks>
       )}

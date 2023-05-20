@@ -1,5 +1,5 @@
 import React, { useState, useEffect, Fragment, useRef } from "react";
-import ViewProductNavBar from "./ViewProductNavBar";
+import AddProductNavBar from "./AddProductNavBar";
 import axios from "axios";
 import EditProduct from "./EditProduct";
 import ViewProductTable from "./ViewProductTable";
@@ -143,7 +143,7 @@ export default function ViewProducts() {
   return (
     <div>
       {/* <AdminNavBar/> */}
-      <ViewProductNavBar />
+      <AddProductNavBar />
 
       <div id="repGSearch" className="col-lg-3 mt-2 mb-2 ml-5">
         <input
