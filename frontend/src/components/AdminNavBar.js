@@ -51,7 +51,7 @@ function AdminNavBar () {
                 </Nav.Link>
 
                 <Nav.Link>
-                <Link to='/customer-home' className='homenav-links'>
+                <Link to='/home' className='homenav-links'>
                          Customer Home
                       </Link>
                 </Nav.Link>

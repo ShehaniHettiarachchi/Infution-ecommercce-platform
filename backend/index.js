@@ -6,7 +6,6 @@ const login = require("./routes/login");
 const orders = require("./routes/orders");
 const stripe = require("./routes/stripe");
 
-const products = require("./products");
 const productRouter = require("./routes/products.js");
 const deliveryRouter = require("./routes/delivers.js");
 
@@ -31,9 +30,6 @@ app.get("/", (req, res) => {
   res.send("Welcome our to online shop API...");
 });
 
-app.get("/products", (req, res) => {
-  res.send(products);
-});
 
 const uri = process.env.DB_URI;
 const port = process.env.PORT || 5000;
