@@ -6,6 +6,6 @@ Technologies used:
   <li>Backend Development - Express / Node.js</li>
   <li>Frontend Development - React.js / Bootstrap / Material UI</li>
   <li>Microservices Intergration - WSO2 EI </li>
-  <li>Payment Gateway - </li>
+  <li>Payment Gateway - Stripe</li>
 </ul>
 
